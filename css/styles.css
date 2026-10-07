@@ -1,0 +1,695 @@
+/* ========================================================================== */
+/*                         RESET Y ESTILOS GENERALES                          */
+/* ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #263238;
+  background-color: #f4f6f7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.seccion {
+  padding: 8rem 7%;
+}
+
+.titulo-seccion {
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.titulo-seccion h2,
+.contacto-info h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem;
+  line-height: 1.15;
+  color: #15232c;
+  margin-bottom: 1.5rem;
+}
+
+.titulo-seccion p {
+  color: #5f6b73;
+}
+
+.etiqueta {
+  display: inline-block;
+  color: #c48a27;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.18rem;
+  margin-bottom: 1rem;
+}
+
+/* ========================================================================== */
+/*                                  HEADER                                    */
+/* ========================================================================== */
+
+.header {
+  width: 100%;
+  background-color: #101b22;
+  color: #ffffff;
+  border-bottom: 4px solid #c48a27;
+}
+
+.header-contenido {
+  max-width: 1250px;
+  margin: auto;
+  padding: 1.6rem 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo-icono {
+  font-size: 3rem;
+}
+
+.nav ul,
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav a,
+.footer-nav a {
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem 1.1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: #101b22;
+  background-color: #f2b84b;
+}
+
+/* ========================================================================== */
+/*                                   HERO                                     */
+/* ========================================================================== */
+
+.hero {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 7%;
+  color: #ffffff;
+
+  /* Requisito: propiedades background aplicadas en una sección */
+  background-image:
+    linear-gradient(rgba(10, 19, 25, 0.88), rgba(10, 19, 25, 0.58)),
+    url("https://upload.wikimedia.org/wikipedia/commons/8/88/Shinkansen.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-contenido {
+  width: 100%;
+  max-width: 780px;
+}
+
+.hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 6.8rem;
+  line-height: 1.05;
+  margin-bottom: 2rem;
+}
+
+.hero-texto {
+  max-width: 660px;
+  font-size: 2rem;
+  color: #eef2f4;
+  margin-bottom: 3rem;
+}
+
+.boton {
+  display: inline-block;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 1.2rem 2.2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.boton:hover,
+.boton:focus {
+  transform: translateY(-2px);
+}
+
+.boton-principal {
+  background-color: #d89a2e;
+  color: #101b22;
+}
+
+.boton-principal:hover,
+.boton-principal:focus {
+  background-color: #f2b84b;
+}
+
+.boton-secundario {
+  background-color: #1d3442;
+  color: #ffffff;
+}
+
+.boton-secundario:hover,
+.boton-secundario:focus {
+  background-color: #2c5168;
+}
+
+/* ========================================================================== */
+/*                             PRESENTACIÓN                                   */
+/* ========================================================================== */
+
+.presentacion {
+  background-color: #ffffff;
+}
+
+.beneficios {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.beneficio {
+  flex: 1 1 280px;
+  max-width: 350px;
+  padding: 2.5rem;
+  background-color: #f7f8f9;
+  border-left: 5px solid #d89a2e;
+  border-radius: 0.8rem;
+}
+
+.beneficio span {
+  font-size: 3rem;
+}
+
+.beneficio h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.2rem;
+  margin: 1rem 0 0.6rem;
+}
+
+/* ========================================================================== */
+/*                         PRODUCTOS - FLEXBOX                                */
+/* ========================================================================== */
+
+.productos {
+  background-color: #edf1f3;
+}
+
+.productos-contenedor {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.card-producto {
+  flex: 1 1 330px;
+  max-width: 385px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2.5rem rgba(16, 27, 34, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1.4rem 3rem rgba(16, 27, 34, 0.16);
+}
+
+.card-producto img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.card-contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem;
+}
+
+.tipo-producto {
+  align-self: flex-start;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10rem;
+  background-color: #fff1d5;
+  color: #875b11;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-producto h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.8rem;
+  margin: 1rem 0;
+  color: #15232c;
+}
+
+.caracteristicas {
+  margin: 1.6rem 0 1.8rem 2rem;
+  color: #55626a;
+}
+
+.precio {
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  color: #9a6918;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* ========================================================================== */
+/*                              MULTIMEDIA                                    */
+/* ========================================================================== */
+
+.multimedia {
+  background-color: #101b22;
+  background-image: linear-gradient(135deg, #101b22 0%, #1d3442 100%);
+}
+
+.titulo-claro h2,
+.titulo-claro p {
+  color: #ffffff;
+}
+
+.multimedia-contenedor {
+  max-width: 1150px;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+  gap: 2.5rem;
+}
+
+.multimedia-imagen,
+.video-contenedor {
+  flex: 1 1 50%;
+}
+
+.multimedia-imagen {
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
+.multimedia-imagen img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.multimedia-imagen figcaption {
+  padding: 1.4rem;
+  color: #263238;
+  text-align: center;
+}
+
+.video-contenedor {
+  min-height: 360px;
+  border: 5px solid #d89a2e;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.video-contenedor iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border: 0;
+}
+
+/* ========================================================================== */
+/*                              RESEÑAS - GRID                                */
+/* ========================================================================== */
+
+.resenas {
+  background-color: #ffffff;
+}
+
+.resenas-grid {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.resena {
+  padding: 2.5rem;
+  border-radius: 0.8rem;
+  background-color: #f4f6f7;
+  border-top: 4px solid #d89a2e;
+}
+
+.estrellas {
+  color: #c7820f;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.resena h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  margin-top: 1.6rem;
+}
+
+.resena span {
+  color: #68767f;
+  font-size: 1.4rem;
+}
+
+/* ========================================================================== */
+/*                            CONTACTO + FORMULARIO                           */
+/* ========================================================================== */
+
+.contacto {
+  background-color: #dfe6ea;
+}
+
+.contacto-contenido {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.contacto-info,
+.formulario {
+  flex: 1 1 50%;
+}
+
+.contacto-info > p:not(.etiqueta) {
+  margin-bottom: 2rem;
+  color: #526069;
+}
+
+.dato-contacto {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.dato-contacto strong {
+  font-family: "Oswald", sans-serif;
+  color: #15232c;
+}
+
+.formulario {
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 1rem 2.5rem rgba(16, 27, 34, 0.1);
+}
+
+.campo {
+  margin-bottom: 1.8rem;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: #263238;
+  font-weight: 700;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 1.2rem 1.3rem;
+  border: 1px solid #aebbc2;
+  border-radius: 0.6rem;
+  background-color: #fbfcfc;
+  color: #263238;
+  font: inherit;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 3px solid rgba(216, 154, 46, 0.24);
+  border-color: #b77a17;
+}
+
+/* ========================================================================== */
+/*                                  FOOTER                                    */
+/* ========================================================================== */
+
+.footer {
+  padding: 4rem 7% 2rem;
+  background-color: #0c151b;
+  color: #dce3e7;
+}
+
+.footer-contenido {
+  max-width: 1150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.logo-footer {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: #f2b84b;
+}
+
+.copyright {
+  max-width: 1150px;
+  margin: 3rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid #344650;
+  color: #93a2aa;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/* ========================================================================== */
+/*                    MEDIA QUERIES - DISEÑO RESPONSIVO                       */
+/* ========================================================================== */
+
+@media (max-width: 900px) {
+  .header-contenido,
+  .footer-contenido {
+    flex-direction: column;
+  }
+
+  .nav ul,
+  .footer-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 5.4rem;
+  }
+
+  .multimedia-contenedor {
+    flex-direction: column;
+  }
+
+  .resenas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Requisito específico: la sección Contacto se adapta con Media Queries */
+@media (max-width: 768px) {
+  .seccion {
+    padding: 6rem 5%;
+  }
+
+  .titulo-seccion h2,
+  .contacto-info h2 {
+    font-size: 3.3rem;
+  }
+
+  .hero {
+    min-height: 65vh;
+    padding: 6rem 5%;
+  }
+
+  .hero h1 {
+    font-size: 4.6rem;
+  }
+
+  .hero-texto {
+    font-size: 1.8rem;
+  }
+
+  .contacto-contenido {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .contacto-info,
+  .formulario {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .header-contenido {
+    align-items: stretch;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .nav ul,
+  .footer-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .productos-contenedor {
+    gap: 1.8rem;
+  }
+
+  .card-producto {
+    flex-basis: 100%;
+  }
+
+  .formulario {
+    padding: 2rem;
+  }
+}
+
+/* ========================================================================== */
+/*                   PÁGINAS INTERNAS Y NAVEGACIÓN ACTIVA                     */
+/* ========================================================================== */
+
+.nav a.activo {
+  color: #101b22;
+  background-color: #f2b84b;
+}
+
+.pagina-encabezado {
+  padding: 6rem 7%;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8e0e4;
+}
+
+.pagina-encabezado h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  line-height: 1.1;
+  color: #15232c;
+  margin-bottom: 1.2rem;
+}
+
+.pagina-encabezado > p:last-child {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #5f6b73;
+}
+
+.pagina-encabezado-oscuro {
+  background-color: #15232c;
+}
+
+.pagina-encabezado-oscuro h1,
+.pagina-encabezado-oscuro > p:last-child {
+  color: #ffffff;
+}
+
+.card-producto h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.8rem;
+  margin: 1rem 0;
+  color: #15232c;
+}
+
+.resena h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  margin-top: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .pagina-encabezado {
+    padding: 4.5rem 5%;
+  }
+
+  .pagina-encabezado h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .pagina-encabezado h1 {
+    font-size: 3.4rem;
+  }
+}
